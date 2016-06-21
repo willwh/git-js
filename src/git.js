@@ -824,6 +824,10 @@
       if (opt.file) {
          command.push("--follow", options.file);
       }
+      
+      if (opt.merges) {
+         command.push("--merges", options.branch + '..');
+      }
 
       if (opt.n || opt['max-count']) {
          command.push("--max-count=" + (opt.n || opt['max-count']));
